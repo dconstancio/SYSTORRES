@@ -13,7 +13,7 @@ class Dashboard extends CI_Controller {
     public function index()
     {
         $data['page_title']  = "Dashboard";
- 
+        $data['nomeUsuario'] = $this->session->userdata('nome');
         // Load View
         $this->template->show('dashboard', $data);
     }

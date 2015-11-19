@@ -22,6 +22,7 @@ class Login extends CI_Controller {
 		if($result) {
 			$this->session->set_userdata(array(
 				'logged' => true,
+				'nome' => $result ['nome'],
 				'user'  => $result['codigo'],
 				'level' => $result['cd_perfil']
 				));
